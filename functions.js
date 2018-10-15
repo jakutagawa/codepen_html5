@@ -6,16 +6,16 @@ $(function() {
 });
 
 //////////
-var photo_dict = {
-    1: 'https://i1.wp.com/film-grab.com/wp-content/uploads/2015/01/6131.jpg',
-    2: 'https://i0.wp.com/film-grab.com/wp-content/uploads/2015/01/6230.jpg',
-    3: 'https://i2.wp.com/film-grab.com/wp-content/uploads/2015/01/6330.jpg',
-    4: 'https://i0.wp.com/film-grab.com/wp-content/uploads/2015/01/6428.jpg'
-}
+var photos = [
+    'https://i1.wp.com/film-grab.com/wp-content/uploads/2015/01/6131.jpg',
+    'https://i0.wp.com/film-grab.com/wp-content/uploads/2015/01/6230.jpg',
+    'https://i2.wp.com/film-grab.com/wp-content/uploads/2015/01/6330.jpg',
+    'https://i0.wp.com/film-grab.com/wp-content/uploads/2015/01/6428.jpg'
+]
 
 var random_bttf_image = new Image;
 
-random_bttf_image.src = photo_dict[Math.floor((Math.random() * 4) + 1)];
+random_bttf_image.src = photos[Math.floor((Math.random() * 4) + 1)];
 
 random_bttf_image.onload = function() {
     canvas.width = random_bttf_image.width * .5;
